@@ -1,0 +1,14 @@
+CC = gcc
+CFLAGS = -std=c11
+SRC = src/main.c
+OUT = build/main
+
+all:
+	@mkdir -p build
+	@$(CC) $(CFLAGS) $(SRC) -o $(OUT)
+
+run: all
+	@./$(OUT)
+
+clean:
+	@rm -rf build
